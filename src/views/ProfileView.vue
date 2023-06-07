@@ -16,30 +16,53 @@
             Language
           </a>
           <ul id="language-menu" class="dropdown-menu">
-            <li><a class="dropdown-item fw-bold" href="#" ><img src="../assets/korflag.png" alt="">한국어</a></li>
-            <li><a class="dropdown-item fw-bold" href="#" ><img src="../assets/usflag.png" alt="">English</a></li>
+            <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setKorean"><img src="../assets/korflag.png" class="flagImg" alt="">한국어</a></li>
+            <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setEnglish"><img src="../assets/usflag.png" class="flagImg" alt="">English</a></li>
           </ul>
         </div>
       </span>
     </nav>
     <div>
-      <AboutMe />
+      <AboutMe :language-set='languageSet' class="view_element" />
+      <SkillView :language-set='languageSet' class="view_element" />
     </div>
   </div>
 </template>
 
 <script>
 import AboutMe from '@/components/AboutMe.vue'
+import SkillView from '@/components/SkillView.vue'
 
 export default {
   name : 'ProfileView',
   components: {
-    AboutMe
+    AboutMe,
+    SkillView,
+  },
+  data(){
+    return{
+    languageSet : 'english'
+    }
+  },
+  methods: {
+    setEnglish(){
+      this.languageSet = 'english'
+    },
+    setKorean(){
+      this.languageSet = 'korean'
+    }
   }
 }
 </script>
 
 <style scoped>
+.view_element{
+  /* 나중에 프로필뷰에서 통합하기 */
+  margin : 14px;
+  /* border : solid 2px blue; */
+  border-radius : 6px;
+  background-color: rgb(32, 55, 95);
+}
 #language-dropdown{
   text-align: center;
   display: flex;
@@ -49,7 +72,12 @@ export default {
 #language-menu {
   min-width : 120px;
   margin-right : 10px;
-  text-align: center;
   background-color: rgb(94, 94, 110);
+}
+#profile_navbar{
+  margin: 6px;
+}
+.flagImg{
+  margin-right: 4px;
 }
 </style>

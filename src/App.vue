@@ -24,10 +24,23 @@
       </nav>
     </div>
     <router-view/>
-    <div id="main-navbar" class="text-light p-2">
-      EMAIL : andrew.daehyun@gmail.com
-      <br>
-      MOBILE: +82 01049096281
+    <div id="main-navbar" class="p-2">
+      <span class="footer">
+        EMAIL : andrew.daehyun@gmail.com
+      </span>
+      <span class="footer">
+        MOBILE: +82 01049096281
+      </span>
+      <span class="footer">
+        <a href="https://aturservice.tistory.com/category/Programming%20Language" target="_blank" class="webLink text-decoration-none text-light">
+        <img src="@/assets/tistory.png" class="logoImg" alt="">
+        Blog
+      </a>
+      <a href="https://github.com/sergeantmeow" target="_blank" class="webLink text-decoration-none text-light">
+        <img src="@/assets/github.png" class="logoImg" alt="">
+        GitHub
+      </a>
+      </span>
     </div>
   </div>
 </template>
@@ -38,7 +51,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
   background-color: #141b21;
 }
 #main-navbar {
@@ -65,5 +78,11 @@ nav a.router-link-exact-active {
 }
 nav a:hover {
   color: rgb(94, 94, 110);
+}
+.footer{
+  margin : 4px;
+}
+.webLink{
+  margin : 4px;
 }
 </style>

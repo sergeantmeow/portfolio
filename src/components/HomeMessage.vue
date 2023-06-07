@@ -36,7 +36,7 @@ li {
 a {
   color: #2154d4;
 }
-#greeting, #level {
+/* #greeting, #level {
   color: white;
-}
+} */
 </style>
