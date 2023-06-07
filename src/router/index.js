@@ -16,9 +16,9 @@ const routes = [
     component: () => import('../views/ProfileView.vue')
   },
   {
-    path: '/contact',
-    name: 'contact',
-    component: () => import('../views/ContactView.vue')
+    path: '/project',
+    name: 'project',
+    component: () => import('../views/ProjectView.vue')
   }
 ]
 

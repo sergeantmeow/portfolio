@@ -1,18 +1,13 @@
 <template>
   <div class="homeMessage">
     <div class="row">
-      <!-- <h1>{{ msg }}</h1> -->
-      <p id="greeting" class="fs-1 fw-bolder">
-        Hi<br>
-        I am <span class="text-primary">Daehyun,</span><br>
-        Web developer
-        <!-- <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>. -->
-      </p>
-      <h3 id="level" class="">Beginner</h3>
-      <ul>
-        <li><a href="../assets/cat.jpg" download class="fw-bold">download</a></li>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-      </ul>
+      <div id="greeting" class="">
+        <p style="font-size:4vw; font-weight:bold;">Hi<br>
+        I am <span class="text-primary">Daehyun An</span>,<br>
+        Aspiring Web developer</p>
+      </div>
+      <h3 id="level" class="">Ex-Hotelier</h3>
+      <h3 id="level" class="">Ex-English Teacher</h3>
     </div>
   </div>
 </template>
