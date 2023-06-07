@@ -26,7 +26,7 @@
     <router-view/>
     <div id="main-navbar" class="p-2">
       <span class="footer">
-        EMAIL : andrew.daehyun@gmail.com
+        EMAIL: andrew.daehyun@gmail.com
       </span>
       <span class="footer">
         MOBILE: +82 01049096281
@@ -84,5 +84,8 @@ nav a:hover {
 }
 .webLink{
   margin : 4px;
+}
+.logoImg{
+  width : 30px;
 }
 </style>

@@ -27,6 +27,7 @@ export default {
     width: 100%;
   }
   #home_face_photo {
+    margin-top : 2%;
     width : 100%;
   }
 </style>

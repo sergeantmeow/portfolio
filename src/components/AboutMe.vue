@@ -21,7 +21,7 @@ export default {
   data(){
     return {
       message : null,
-      messageKor : '다른듯한 상황이다. 엄석대와는 달리 검은 각반들은 악당 그 자체이다. 이러한 악당일지라도 이를 타도하는'+
+      messageKor : '이러한 악당일지라도 이를 타도하는'+
                     '과정에서 일어나는 무질서와 폭력에 대해서 생각해 볼 수 있는 부분이다. 필론과 돼지에서 주인공이 딱히'+
                     '누구 편을 들지는 않았지만 작중 묘사를 보면 민중 봉기의 무질서에 대한 이문열의 의식을 볼 수 있다. '+
                     '아마 그의 정치적 성향을 본다면 어느 정도 상통하는 부분. 한편으로는 주인공과 같은 지식인들이 내면에는'+
@@ -45,8 +45,7 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
 #aboutMeHeader{
   margin : 6px;
 }
@@ -55,7 +54,6 @@ export default {
 }
 #portrait{
   max-width: 94%;
-  border : solid 2px blue;
   border-radius : 6px;
   margin : 4px;
   margin-bottom: 10px;

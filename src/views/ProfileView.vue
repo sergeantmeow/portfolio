@@ -2,16 +2,16 @@
   <div class="profile">
     <nav id="profile_navbar">
       <span class="provile_nav">
-        <a href="" class="text-decoration-none m-2">About Me</a>
+        <a href="#aboutMe" class="text-decoration-none m-2">About Me</a>
       </span>
       <span class="profile_nav">
-        <a href="" class="text-decoration-none m-2">Skill</a>
+        <a href="#skillView" class="text-decoration-none m-2">Skills</a>
       </span>
       <span class="profile_nav">
-        <a href="" class="text-decoration-none m-2">Experience</a>
+        <a href="#experienceView" class="text-decoration-none m-2">Experiences</a>
       </span>
       <span class="profile_nav">
-        <div id="language-dropdown" class="nav-item dropdown">
+        <span id="language-dropdown" class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Language
           </a>
@@ -19,12 +19,12 @@
             <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setKorean"><img src="../assets/korflag.png" class="flagImg" alt="">한국어</a></li>
             <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setEnglish"><img src="../assets/usflag.png" class="flagImg" alt="">English</a></li>
           </ul>
-        </div>
+        </span>
       </span>
     </nav>
     <div>
-      <AboutMe :language-set='languageSet' class="view_element" />
-      <SkillView :language-set='languageSet' class="view_element" />
+      <AboutMe :language-set='languageSet' id="aboutMe" class="view_element" />
+      <SkillView :language-set='languageSet' id="skillView" class="view_element" />
     </div>
   </div>
 </template>
@@ -57,9 +57,7 @@ export default {
 
 <style scoped>
 .view_element{
-  /* 나중에 프로필뷰에서 통합하기 */
   margin : 14px;
-  /* border : solid 2px blue; */
   border-radius : 6px;
   background-color: rgb(32, 55, 95);
 }
