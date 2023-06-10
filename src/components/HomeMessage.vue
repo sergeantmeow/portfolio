@@ -16,7 +16,7 @@
 export default {
   name: 'HomeMessage',
   props: {
-    // msg: String
+    
   }
 }
 </script>

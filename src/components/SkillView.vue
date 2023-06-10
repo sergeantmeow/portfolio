@@ -36,7 +36,7 @@
 
     <div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-fullsize">
-        <div class="modal-header">
+        <div class="modal-header d-flex justify-content-around">
           <h5 class="modal-title fw-bold">{{ skillTitle }}</h5>
         </div>
         <div id="modal_content" class="col text-light fw-bold">

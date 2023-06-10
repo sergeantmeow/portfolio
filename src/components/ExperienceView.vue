@@ -1,30 +1,34 @@
 <template>
   <div class="row experience">
     <div id="experienceHeader"><h3>Experiences</h3></div>
-    <div>
+    <div id="experiences">
       <ul>
         <li>
           Company name : {{ high_level_title }}<br>
           Job Position : {{ high_level_jp }}<br>
-          Job Description : {{ high_level_jd }}
+          Job Description :
+          <p v-html="high_level_jd"></p>
         </li>
+        <hr>
         <li>
           Company name : {{ courtyard_title }}<br>
           Job Position : {{ courtyard_jp }}<br>
-          Job Description : {{ courtyard_jd }}  
+          Job Description :
+          <p v-html="courtyard_jd"></p> 
         </li>
+        <hr>
         <li>
           Company name : {{ hyatt_title }}<br>
           Job Position : {{ hyatt_jp }}<br>
-          Job Description : {{ hyatt_jd }}
+          Job Description : 
+          <p v-html="hyatt_jd"></p>
         </li>
+        <hr>
         <li>
           Company name : {{ marriott_title }}<br>
           Job Position : {{ marriott_jp }}<br>
-          Job Description : {{ marriott_jd }}
-        </li>
-        <li>
-          Samsung Software Academy For Youth
+          Job Description :
+          <p v-html="marriott_jd"></p>
         </li>
       </ul>
     </div>
@@ -60,9 +64,9 @@ export default {
     },
     high_level_jd(){
       if(this.languageSet === 'korean'){
-        return '가르치기'
+        return '<ul><li>문제풀이 해설</li><li>숙제 검사 및 채점</li><li>기출문제 분석</li></ul>'
       }else{
-        return 'teaching'
+        return '<ul><li>Solving Question</li><li>Homework Check</li><li>Test question Analysis</li></ul>'
       }
     },
     courtyard_title(){
@@ -81,9 +85,9 @@ export default {
     },
     courtyard_jd(){
       if(this.languageSet === 'korean'){
-        return '이것저것'
+        return '<ul><li>고객응대</li><li>체크인, 체크아웃 진행</li><li>일간 거래 정산 및 보고</li></ul>'
       }else{
-        return 'this and that'
+        return '<ul><li>Guest Service</li><li>Process Check-in and Check-out</li><li>Night Audit</li></ul>'
       }
     },
     hyatt_title(){
@@ -102,9 +106,9 @@ export default {
     },
     hyatt_jd(){
       if(this.languageSet === 'korean'){
-        return '이것저것'
+        return '<ul><li>입고물품 검수 및 매입</li><li>식자재 발주요청 취합 및 발주</li></ul>'
       }else{
-        return 'this and that'
+        return '<ul><li>Receiving delivered items</li><li>Integrate food purchase requisition and make order</li></ul>'
       }
     },
     marriott_title(){
@@ -123,9 +127,9 @@ export default {
     },
     marriott_jd(){
       if(this.languageSet === 'korean'){
-        return '이것저것'
+        return '<ul><li>발주요청 검토 및 발주</li><li>견적 취합 및 낙찰</li><li>정기 및 수시 보고 데이터 취합</li></ul>'
       }else{
-        return 'this and that'
+        return '<ul><li>Reviewing purchase requisition and make order</li><li>Collectiong quotations and bid</li><li>Integrate and process data for reports</li></ul>'
       }
     },
 
@@ -136,5 +140,11 @@ export default {
 <style scoped>
 #experienceHeader{
   margin : 6px;
+}
+#experiences{
+  text-align: left;
+}
+ul{
+  list-style-type: none;
 }
 </style>
