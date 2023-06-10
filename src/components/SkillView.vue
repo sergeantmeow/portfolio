@@ -1,39 +1,35 @@
 <template>
   <div class="row skill">
-    <div id="skillHeader"><h3>Skills</h3></div>
-    <div id="skillCircles">
-      <div class="row">
-        <div class="col d-flex justify-content-around" >
-          <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getPython">
-            <img src="../assets/python.png" alt="">
-          </div>
-        </div>
-        <div class="col d-flex justify-content-around">
-          <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getJava">
-            <img src="../assets/java.png" alt="">
-          </div>
-        </div>
-        <div class="col d-flex justify-content-around">
-          <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getJavaScript">
-            <img src="../assets/javascript.png" alt="">
-          </div>
+    <div id="skillHeader" class=""><h3>Skills</h3></div>
+    <div id="skillCircles" class="row">
+      <div class="col-6 col-sm-4 d-flex justify-content-around" >
+        <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getPython">
+          <img src="../assets/python.png" alt="">
         </div>
       </div>
-      <div class="row">
-        <div class="col d-flex justify-content-around">
-          <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getMYSql">
-            <img src="../assets/mysql.png" id="mysql_img" alt="">
-          </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-around">
+        <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getJava">
+          <img src="../assets/java.png" alt="">
         </div>
-        <div class="col d-flex justify-content-around">
-          <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getDjango">
-            <img src="../assets/django.png" alt="">
-          </div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-around">
+        <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getJavaScript">
+          <img src="../assets/javascript.png" alt="">
         </div>
-        <div class="col d-flex justify-content-around">
-          <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getVue">
-            <img src="../assets/vue.png" id="vue_img" alt="">
-          </div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-around">
+        <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getMYSql">
+          <img src="../assets/mysql.png" id="mysql_img" alt="">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-around">
+        <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getDjango">
+          <img src="../assets/django.png" alt="">
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 d-flex justify-content-around">
+        <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getVue">
+          <img src="../assets/vue.png" id="vue_img" alt="">
         </div>
       </div>
     </div>
@@ -161,24 +157,31 @@ export default {
 </script>
 
 <style scoped>
+#testhere{
+  margin-left: 14px;
+}
 #skillHeader{
   margin : 6px;
+}
+#skillCircles{
+  margin-left : 0px;
 }
 .circle{
   border-radius : 25%;
   background-color: black;
-  width: 200px;
-  height: 200px;
-  margin-bottom: 10px;
+  width: 14vw;
+  height: 14vw;
+  min-width: 120px;
+  min-height: 120px;
+  margin-bottom: 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition-property: width, height;
+  transition-property: transform;
   transition-duration: 0.5s, 0.5s;
 }
 .circle:hover{
-  width: 220px;
-  height: 220px;
+  transform : scale(1.1);
   cursor: pointer;
 }
 img{

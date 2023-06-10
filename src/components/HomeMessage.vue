@@ -6,8 +6,8 @@
         I am <span class="text-primary">Daehyun An</span>,<br>
         Aspiring Web developer</p>
       </div>
-      <h3 id="level" class="">Ex-Hotelier</h3>
-      <h3 id="level" class="">Ex-English Teacher</h3>
+      <div id="level" style="font-size:3vw">Ex-Hotelier</div>
+      <div id="level" style="font-size:3vw">Ex-English Teacher</div>
     </div>
   </div>
 </template>
@@ -36,7 +36,5 @@ li {
 a {
   color: #2154d4;
 }
-/* #greeting, #level {
-  color: white;
-} */
+
 </style>

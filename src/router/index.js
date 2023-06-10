@@ -15,11 +15,6 @@ const routes = [
     name: 'profile',
     component: () => import('../views/ProfileView.vue')
   },
-  {
-    path: '/project',
-    name: 'project',
-    component: () => import('../views/ProjectView.vue')
-  }
 ]
 
 const router = new VueRouter({

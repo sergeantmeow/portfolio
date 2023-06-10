@@ -11,6 +11,9 @@
         <a href="#experienceView" class="text-decoration-none m-2">Experiences</a>
       </span>
       <span class="profile_nav">
+        <a href="#experienceView" class="text-decoration-none m-2">Projects</a>
+      </span>
+      <span class="profile_nav">
         <span id="language-dropdown" class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Language
@@ -25,6 +28,8 @@
     <div>
       <AboutMe :language-set='languageSet' id="aboutMe" class="view_element" />
       <SkillView :language-set='languageSet' id="skillView" class="view_element" />
+      <ExperienceView :language-set='languageSet' id="experienceView" class="view_element" />
+      <ProjectView :language-set='languageSet' id="projectView" class="view_element" />
     </div>
   </div>
 </template>
@@ -32,12 +37,16 @@
 <script>
 import AboutMe from '@/components/AboutMe.vue'
 import SkillView from '@/components/SkillView.vue'
+import ExperienceView from '@/components/ExperienceView.vue'
+import ProjectView from '@/components/ProjectView.vue'
 
 export default {
   name : 'ProfileView',
   components: {
     AboutMe,
     SkillView,
+    ExperienceView,
+    ProjectView,
   },
   data(){
     return{
@@ -66,6 +75,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 6px;
 }
 #language-menu {
   min-width : 120px;
@@ -73,7 +83,7 @@ export default {
   background-color: rgb(94, 94, 110);
 }
 #profile_navbar{
-  margin: 6px;
+  margin-top:6px;
 }
 .flagImg{
   margin-right: 4px;

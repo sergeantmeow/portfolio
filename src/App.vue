@@ -15,22 +15,21 @@
               <li class="nav-item">
                 <a class="nav-link" href="#"><router-link to="/profile" class="text-decoration-none">Profile</router-link></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><router-link to="/project" class="text-decoration-none">Project</router-link></a>
-              </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
     <router-view/>
-    <div id="main-navbar" class="p-2">
-      <span class="footer">
-        EMAIL: andrew.daehyun@gmail.com
-      </span>
-      <span class="footer">
-        MOBILE: +82 01049096281
-      </span>
+    <div id="footer-navbar" class="p-2">
+      <div>
+        <span class="footer">
+          EMAIL: andrew.daehyun@gmail.com
+        </span>
+        <span class="footer">
+          MOBILE: +82 01049096281
+        </span>
+      </div>
       <span class="footer">
         <a href="https://aturservice.tistory.com/category/Programming%20Language" target="_blank" class="webLink text-decoration-none text-light">
         <img src="@/assets/tistory.png" class="logoImg" alt="">
@@ -54,8 +53,13 @@
   color: white;
   background-color: #141b21;
 }
-#main-navbar {
+#main-navbar{
   background-color: rgb(32, 55, 95);
+}
+#footer-navbar {
+  background-color: rgb(32, 55, 95);
+  font-size : calc(4px + 1vw);
+  
 }
 .navbar-toggler-icon{
   background-image: url('/src/assets/hamburg_icon.png');
@@ -86,6 +90,6 @@ nav a:hover {
   margin : 4px;
 }
 .logoImg{
-  width : 30px;
+  width : calc(4px + 2vw);
 }
 </style>

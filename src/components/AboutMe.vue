@@ -1,16 +1,18 @@
 <template>
   <div class="row aboutMe">
-    <div id="aboutMeHeader"><h3>About Me</h3></div>
-    <div class="col">
-      <img src="../assets/portrait.jpeg" id="portrait" alt="">
-    </div>
-    <div id="aboutMeIntro" class="col">
-      <p v-if="languageSet === 'korean'">
-        {{ messageKor }}
-      </p>
-      <p v-if="languageSet === 'english'">
-        {{ messageEng }}
-      </p>
+    <div id="aboutMeHeader" class="col-12"><h3>About Me</h3></div>
+    <div class="col-12 d-flex flex-wrap flex-sm-row flex-column">
+      <div class="col">
+        <img src="../assets/portrait.jpeg" id="portrait" alt="">
+      </div>
+      <div id="aboutMeIntro" class="col">
+        <p v-if="languageSet === 'korean'">
+          {{ messageKor }}
+        </p>
+        <p v-if="languageSet === 'english'">
+          {{ messageEng }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -53,7 +55,7 @@ export default {
   margin : 4px;
 }
 #portrait{
-  max-width: 94%;
+  max-width: 80%;
   border-radius : 6px;
   margin : 4px;
   margin-bottom: 10px;
