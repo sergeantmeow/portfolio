@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <div id="wrapper" class="row">
-      <div id="home_face_photo_area" class="col">
+      <div id="home_face_photo_area" class="col-12 col-sm-6">
         <img id="home_face_photo" alt="" src= "../assets/face2.png">
       </div>
-      <div id="home_message" class="col d-flex align-items-center">
+      <div id="home_message" class="col-12 col-sm-6 d-flex align-items-center">
         <HomeMessage />
       </div>
     </div>
