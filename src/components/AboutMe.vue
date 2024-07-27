@@ -32,7 +32,7 @@ export default {
                     '추가적으로, 기능에 대한 암기보다는 구조적 이해를 우선적으로 학습해왔기에 다소 낯선 업무 및 개념에도 '+
                     '빠르게 적응할 수 있을 것이라 확신합니다.<br>'+
                     '궁금하신 점이 있다면 언제든 페이지 하단의 연락처로 연락 부탁드립니다.</p>',
-      messageEng : 'I have been led to believe that one of the key values of web developer is excellent collaboration '+
+      messageEng : 'TEST TEST I have been led to believe that one of the key values of web developer is excellent collaboration '+
                     'skills including open-mindness and communication. I have more than 4 years of experience in '+
                     'hospitality industry - a year in customer service and 3 years in purchasing. Which led me to learn '+
                     ' how to cooperate and communicate with both coworkers and customers.<br>'+
