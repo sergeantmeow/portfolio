@@ -4,7 +4,7 @@
       <div id="greeting" class="">
         <p style="font-size:4vw; font-weight:bold;">Hi<br>
         I am <span class="text-primary">Daehyun An</span>,<br>
-        Aspiring Web developer</p>
+        IT Service Analyst</p>
       </div>
       <div id="level" style="font-size:3vw">Ex-Hotelier</div>
       <div id="level" style="font-size:3vw">Ex-English Teacher</div>
