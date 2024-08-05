@@ -109,4 +109,19 @@ nav a:hover {
 .contactImg{
   width : calc(1px + 1.5vw);
 }
+@media (max-width: 767.98px) {
+  .nav-link{
+    font-size: 4vw;
+    text-shadow: none;
+  }
+  .logoImg{
+    width : calc(4px + 3.5vw);
+  }
+  .contactImg{
+    width : calc(4px + 3.5vw);
+  }
+  .footer{
+    font-size: 3.5vw;
+  }
+}
 </style>
