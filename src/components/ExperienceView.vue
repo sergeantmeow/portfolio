@@ -4,17 +4,10 @@
     <div id="experiences">
       <ul>
         <li>
-          Company name : {{ high_level_title }}<br>
-          Job Position : {{ high_level_jp }}<br>
+          Company name : {{ marriott_title }}<br>
+          Job Position : {{ marriott_jp }}<br>
           Job Description :
-          <p v-html="high_level_jd"></p>
-        </li>
-        <hr>
-        <li>
-          Company name : {{ courtyard_title }}<br>
-          Job Position : {{ courtyard_jp }}<br>
-          Job Description :
-          <p v-html="courtyard_jd"></p> 
+          <p v-html="marriott_jd"></p>
         </li>
         <hr>
         <li>
@@ -25,10 +18,17 @@
         </li>
         <hr>
         <li>
-          Company name : {{ marriott_title }}<br>
-          Job Position : {{ marriott_jp }}<br>
+          Company name : {{ courtyard_title }}<br>
+          Job Position : {{ courtyard_jp }}<br>
           Job Description :
-          <p v-html="marriott_jd"></p>
+          <p v-html="courtyard_jd"></p> 
+        </li>
+        <hr>
+        <li>
+          Company name : {{ high_level_title }}<br>
+          Job Position : {{ high_level_jp }}<br>
+          Job Description :
+          <p v-html="high_level_jd"></p>
         </li>
       </ul>
     </div>

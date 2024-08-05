@@ -42,9 +42,7 @@
         <div id="modal_content" class="col text-light fw-bold">
           <ul>
             <p v-html="skillData"></p>
-          </ul>
-          <ul>
-            <img :src="skillImage" id="test_img" alt="">
+            <!-- <img :src="skillImage" id="test_img" alt=""> -->
           </ul>
         </div>
         <div class="modal-footer">

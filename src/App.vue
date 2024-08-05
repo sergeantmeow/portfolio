@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <div>
-      <nav id="main-navbar" class="navbar navbar-expand-lg">
+      <nav id="main-navbar" class="navbar navbar-expand-md">
         <div class="container-fluid">
-          <div class="navbar-brand text-light">AN DAEHYUN</div>
+          <div class="navbar-brand text-light">DAEHYUN AN</div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
                 <a class="nav-link" href="#"><router-link to="/" class="text-decoration-none">Home</router-link></a>
               </li>
@@ -38,6 +38,10 @@
       <a href="https://github.com/sergeantmeow" target="_blank" class="webLink text-decoration-none text-light">
         <img src="@/assets/github.png" class="logoImg" alt="">
         GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/daehyun-an-13186a242/" target="_blank" class="webLink text-decoration-none text-light">
+        <img src="@/assets/linkedin.png" class="logoImg" alt="">
+        LinkedIn
       </a>
       </span>
     </div>
@@ -79,6 +83,7 @@ nav a {
 }
 nav a.router-link-exact-active {
   color: blue; 
+  text-shadow: 0px 0px 8px white;
 }
 nav a:hover {
   color: rgb(94, 94, 110);

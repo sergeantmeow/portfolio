@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <div id="wrapper" class="row">
-      <div id="home_face_photo_area" class="col-12 col-sm-6">
-        <img id="home_face_photo" alt="" src= "../assets/face2.png">
+      <div id="home_face_photo_area" class="col-12 col-md-6 d-flex align-items-center">
+        <img id="home_face_photo" alt="" src= "../assets/memoji2.png">
       </div>
-      <div id="home_message" class="col-12 col-sm-6 d-flex align-items-center">
+      <div id="home_message" class="col-12 col-md-6 d-flex align-items-center justify-content-center justify-content-md-start">
         <HomeMessage />
       </div>
     </div>
@@ -28,6 +28,6 @@ export default {
   }
   #home_face_photo {
     margin-top : 2%;
-    width : 100%;
+    width : 70%;
   }
 </style>
