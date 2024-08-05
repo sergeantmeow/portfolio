@@ -22,28 +22,34 @@
     </div>
     <router-view/>
     <div id="footer-navbar" class="p-2">
-      <div>
+      <div class="footerRow">
         <span class="footer">
-          EMAIL: andrew.daehyun@gmail.com
+          <a href="mailto:andrew.daehyun@gmail.com" class="webLink text-decoration-none text-light">
+            <img src="@/assets/email.png" class="contactImg" alt=""> andrew.daehyun@gmail.com
+          </a>
         </span>
         <span class="footer">
-          MOBILE: +82 01049096281
+          <a href="tel:+821049096281" class="webLink text-decoration-none text-light">
+            <img src="@/assets/phone.png" class="contactImg" alt=""> +82 1049096281
+          </a>
         </span>
       </div>
-      <span class="footer">
-        <a href="https://aturservice.tistory.com/category/Programming%20Language" target="_blank" class="webLink text-decoration-none text-light">
-        <img src="@/assets/tistory.png" class="logoImg" alt="">
-        Blog
-      </a>
-      <a href="https://github.com/sergeantmeow" target="_blank" class="webLink text-decoration-none text-light">
-        <img src="@/assets/github.png" class="logoImg" alt="">
-        GitHub
-      </a>
-      <a href="https://www.linkedin.com/in/daehyun-an-13186a242/" target="_blank" class="webLink text-decoration-none text-light">
-        <img src="@/assets/linkedin.png" class="logoImg" alt="">
-        LinkedIn
-      </a>
-      </span>
+      <div class="footerRow">
+        <span class="footer">
+          <a href="https://aturservice.tistory.com/category/Programming%20Language" target="_blank" class="webLink text-decoration-none text-light">
+          <img src="@/assets/tistory.png" class="logoImg" alt="">
+          Blog
+          </a>
+          <a href="https://github.com/sergeantmeow" target="_blank" class="webLink text-decoration-none text-light">
+            <img src="@/assets/github.png" class="logoImg" alt="">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/daehyun-an-13186a242/" target="_blank" class="webLink text-decoration-none text-light">
+            <img src="@/assets/linkedin.png" class="logoImg" alt="">
+            LinkedIn
+          </a>
+        </span>
+      </div>
     </div>
   </div>
 </template>
@@ -91,10 +97,16 @@ nav a:hover {
 .footer{
   margin : 4px;
 }
+.footerRow{
+  margin-bottom: 5px;
+}
 .webLink{
   margin : 4px;
 }
 .logoImg{
-  width : calc(4px + 2vw);
+  width : calc(4px + 1.5vw);
+}
+.contactImg{
+  width : calc(1px + 1.5vw);
 }
 </style>

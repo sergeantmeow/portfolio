@@ -42,7 +42,9 @@
         <div id="modal_content" class="col text-light fw-bold">
           <ul>
             <p v-html="skillData"></p>
-            <!-- <img :src="skillImage" id="test_img" alt=""> -->
+            <p v-if="skillImage">
+              <img :src="skillImage" id="test_img" alt="">
+            </p>
           </ul>
         </div>
         <div class="modal-footer">
@@ -88,7 +90,7 @@ export default {
     },
     getJava(){
       this.skillTitle = 'Java'
-      this.skillImage = "../asset/test.gif"
+      this.skillImage = require("../assets/test.gif")
       if(this.languageSet === 'korean'){
         this.skillData =  
           '<li>class 선언 및 이를 인스턴스화하여 사용하는 것에 익숙함</li>' +
@@ -105,7 +107,7 @@ export default {
     },
     getJavaScript(){
       this.skillTitle = 'JavaScript'
-      this.skillImage = "../asset/test.gif"
+      this.skillImage = null
       if(this.languageSet === 'korean'){
         this.skillData = 
           '<li>DOM API에 익숙함</li>' + 
@@ -120,7 +122,7 @@ export default {
     },
     getMYSql(){
       this.skillTitle = 'MYSql'
-      this.skillImage = "../asset/test.gif"
+      this.skillImage = null
       if(this.languageSet === 'korean'){
         this.skillData = 
           '<li>터미널을 통한 쿼리문 입력 및 워크벤치를 통한 조작에 익숙함</li>' + 
@@ -133,7 +135,7 @@ export default {
     },
     getDjango(){
       this.skillTitle = 'Django'
-      this.skillImage = "../asset/test.gif"
+      this.skillImage = null
       if(this.languageSet === 'korean'){
         this.skillData = 
           '<li><span class="text-primary">MVC Design Pattern, REST API</span>에 익숙함</li>' + 
@@ -148,7 +150,7 @@ export default {
     },
     getVue(){
       this.skillTitle = 'Vue'
-      this.skillImage = "../asset/test.gif"
+      this.skillImage = null
       if(this.languageSet === 'korean'){
         this.skillData = 
           '<li><span class="text-primary">vuex, router, store</span> 등의 활용에 익숙함</li>' + 

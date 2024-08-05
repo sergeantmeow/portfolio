@@ -2,16 +2,16 @@
   <div class="profile">
     <nav id="profile_navbar">
       <span class="provile_nav">
-        <a href="#aboutMe" class="text-decoration-none m-2">About Me</a>
+        <a href="#aboutMe" class="text-decoration-none m-2" @click.prevent="scrollTo('aboutMe', 100)">About Me</a>
       </span>
       <span class="profile_nav">
-        <a href="#skillView" class="text-decoration-none m-2">Skills</a>
+        <a href="#skillView" class="text-decoration-none m-2" @click.prevent="scrollTo('skillView', 200)">Skills</a>
       </span>
       <span class="profile_nav">
-        <a href="#experienceView" class="text-decoration-none m-2">Experiences</a>
+        <a href="#experienceView" class="text-decoration-none m-2" @click.prevent="scrollTo('experienceView', 300)">Experiences</a>
       </span>
       <span class="profile_nav">
-        <a href="#experienceView" class="text-decoration-none m-2">Projects</a>
+        <a href="#projectView" class="text-decoration-none m-2" @click.prevent="scrollTo('projectView', 400)">Projects</a>
       </span>
       <span class="profile_nav">
         <span id="language-dropdown" class="nav-item dropdown">
@@ -39,6 +39,7 @@ import AboutMe from '@/components/AboutMe.vue'
 import SkillView from '@/components/SkillView.vue'
 import ExperienceView from '@/components/ExperienceView.vue'
 import ProjectView from '@/components/ProjectView.vue'
+import { smoothScroll } from '@/smooth-scroll.js';
 
 export default {
   name : 'ProfileView',
@@ -59,7 +60,10 @@ export default {
     },
     setKorean(){
       this.languageSet = 'korean'
-    }
+    },
+    scrollTo(targetId, duration) {
+      smoothScroll(targetId, duration);
+    },
   }
 }
 </script>
