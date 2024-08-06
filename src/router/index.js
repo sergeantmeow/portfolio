@@ -15,6 +15,16 @@ const routes = [
     name: 'profile',
     component: () => import('../views/ProfileView.vue')
   },
+  {
+    path: '/skill',
+    name: 'skill',
+    component: () => import('../views/SkillsView.vue')
+  },
+  {
+    path: '/experience',
+    name: 'experience',
+    component: () => import('../views/ExperiencesView.vue')
+  }
 ]
 
 const router = new VueRouter({

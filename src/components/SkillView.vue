@@ -2,6 +2,11 @@
   <div class="row skill">
     <div id="skillHeader" class=""><h3>Skills</h3></div>
     <div id="skillCircles" class="row">
+      <div class="col-6 col-sm-4 d-flex justify-content-around">
+        <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getDjango">
+          <img src="../assets/powershell.png" alt="">
+        </div>
+      </div>
       <div class="col-6 col-sm-4 d-flex justify-content-around" >
         <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getPython">
           <img src="../assets/python.png" alt="">
@@ -23,11 +28,6 @@
         </div>
       </div>
       <div class="col-6 col-sm-4 d-flex justify-content-around">
-        <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getDjango">
-          <img src="../assets/django.png" alt="">
-        </div>
-      </div>
-      <div class="col-6 col-sm-4 d-flex justify-content-around">
         <div class="circle" data-bs-toggle="modal" data-bs-target="#skillModal" @click.prevent="getVue">
           <img src="../assets/vue.png" id="vue_img" alt="">
         </div>
@@ -35,7 +35,7 @@
     </div>
 
     <div class="modal fade" id="skillModal" tabindex="-1" aria-labelledby="skillModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullsize">
+      <div class="modal-dialog modal-lg">
         <div class="modal-header d-flex justify-content-around">
           <h5 class="modal-title fw-bold">{{ skillTitle }}</h5>
         </div>
@@ -52,8 +52,7 @@
         </div>
       </div>
     </div>
-  </div>
-  
+  </div>  
 </template>
 
 <script>
@@ -86,7 +85,6 @@ export default {
           '<li>Experienced a duo project using the language</li>' +
           '<li>Utilize Visual Studio Code as main IDE</li>'
       }
-      console.log("Get Python")
     },
     getJava(){
       this.skillTitle = 'Java'
@@ -134,8 +132,8 @@ export default {
       }
     },
     getDjango(){
-      this.skillTitle = 'Django'
-      this.skillImage = null
+      this.skillTitle = 'Powershell'
+      this.skillImage = require("../assets/joiner.gif")
       if(this.languageSet === 'korean'){
         this.skillData = 
           '<li><span class="text-primary">MVC Design Pattern, REST API</span>에 익숙함</li>' + 

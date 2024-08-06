@@ -15,6 +15,12 @@
               <li class="nav-item">
                 <a class="nav-link" href="#"><router-link to="/profile" class="text-decoration-none">Profile</router-link></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><router-link to="/skill" class="text-decoration-none">Skill</router-link></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><router-link to="/experience" class="text-decoration-none">Experience</router-link></a>
+              </li>
             </ul>
           </div>
         </div>
