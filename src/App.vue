@@ -21,8 +21,24 @@
               <li class="nav-item">
                 <a class="nav-link" href="#"><router-link to="/experience" class="text-decoration-none">Experience</router-link></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><router-link to="/contact" class="text-decoration-none">Contact</router-link></a>
+              </li>
             </ul>
           </div>
+
+          <!-- <span class="profile_nav"> -->
+        <span id="language-dropdown" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Language
+          </a>
+          <ul id="language-menu" class="dropdown-menu">
+            <li><a class="dropdown-item fw-bold" href="#" ><img src="assets/korflag.png" class="flagImg" alt="">한국어</a></li>
+            <li><a class="dropdown-item fw-bold" href="#" ><img src="assets/usflag.png" class="flagImg" alt="">English</a></li>
+          </ul>
+        </span>
+      <!-- </span> -->
+
         </div>
       </nav>
     </div>
@@ -114,6 +130,24 @@ nav a:hover {
 }
 .contactImg{
   width : calc(1px + 1.5vw);
+}
+#language-dropdown{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+}
+#language-menu {
+  min-width : 120px;
+  margin-right : 10px;
+  background-color: rgb(94, 94, 110);
+}
+#profile_navbar{
+  margin-top:6px;
+}
+.flagImg{
+  margin-right: 4px;
 }
 @media (max-width: 767.98px) {
   .nav-link{
