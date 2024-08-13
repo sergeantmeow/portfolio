@@ -24,25 +24,21 @@
               <li class="nav-item">
                 <a class="nav-link" href="#"><router-link to="/contact" class="text-decoration-none">Contact</router-link></a>
               </li>
+              <li id="language-dropdown" class="nav-item dropdown">
+                <a id="language-dropdown-button" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ language }}
+                </a>
+                <ul id="language-menu" class="dropdown-menu">
+                  <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setKorean"><img src="@/assets/korflag.png" class="flagImg" alt="">한국어</a></li>
+                  <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setEnglish"><img src="@/assets/usflag.png" class="flagImg" alt="">English</a></li>
+                </ul>
+              </li>
             </ul>
           </div>
-
-          <!-- <span class="profile_nav"> -->
-        <span id="language-dropdown" class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Language
-          </a>
-          <ul id="language-menu" class="dropdown-menu">
-            <li><a class="dropdown-item fw-bold" href="#" ><img src="assets/korflag.png" class="flagImg" alt="">한국어</a></li>
-            <li><a class="dropdown-item fw-bold" href="#" ><img src="assets/usflag.png" class="flagImg" alt="">English</a></li>
-          </ul>
-        </span>
-      <!-- </span> -->
-
         </div>
       </nav>
     </div>
-    <router-view/>
+    <router-view :languageSetting="languageSetting"/>
     <div id="footer-navbar" class="p-2">
       <div class="footerRow">
         <span class="footer">
@@ -75,6 +71,28 @@
     </div>
   </div>
 </template>
+
+<script>
+export default{
+  data(){
+      return{
+      languageSetting : 'english',
+      language : 'Language',
+      }
+    },
+    methods: {
+      setEnglish(){
+        this.languageSetting = 'english'
+        this.language = 'Language'
+      },
+      setKorean(){
+        this.languageSetting = 'korean'
+        this.language = '언어'
+      },
+
+  }
+}
+</script>
 
 <style>
 #app {
@@ -136,7 +154,12 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 6px;
+}
+#language-dropdown-button{
+  color: white;
+}
+#language-dropdown-button:hover{
+  color: rgb(94, 94, 110);
 }
 #language-menu {
   min-width : 120px;

@@ -14,7 +14,7 @@
         <a href="#projectView" class="text-decoration-none m-2" @click.prevent="scrollTo('projectView', 400)">Projects</a>
       </span>
       <span class="profile_nav">
-        <span id="language-dropdown" class="nav-item dropdown">
+        <!-- <span id="language-dropdown" class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Language
           </a>
@@ -22,14 +22,14 @@
             <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setKorean"><img src="../assets/korflag.png" class="flagImg" alt="">한국어</a></li>
             <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setEnglish"><img src="../assets/usflag.png" class="flagImg" alt="">English</a></li>
           </ul>
-        </span>
+        </span> -->
       </span>
     </nav>
     <div>
-      <AboutMe :language-set='languageSet' id="aboutMe" class="view_element" />
-      <SkillView :language-set='languageSet' id="skillView" class="view_element" />
-      <ExperienceView :language-set='languageSet' id="experienceView" class="view_element" />
-      <ProjectView :language-set='languageSet' id="projectView" class="view_element" />
+      <AboutMe :language-set='languageSetting' id="aboutMe" class="view_element" />
+      <SkillView :language-set='languageSetting' id="skillView" class="view_element" />
+      <ExperienceView :language-set='languageSetting' id="experienceView" class="view_element" />
+      <ProjectView :language-set='languageSetting' id="projectView" class="view_element" />
     </div>
   </div>
 </template>
@@ -43,24 +43,19 @@ import { smoothScroll } from '@/smooth-scroll.js';
 
 export default {
   name : 'ProfileView',
+  props : {
+    languageSetting: {
+      type: String,
+      default : 'english'
+    },
+  },
   components: {
     AboutMe,
     SkillView,
     ExperienceView,
     ProjectView,
   },
-  data(){
-    return{
-    languageSet : 'english'
-    }
-  },
   methods: {
-    setEnglish(){
-      this.languageSet = 'english'
-    },
-    setKorean(){
-      this.languageSet = 'korean'
-    },
     scrollTo(targetId, duration) {
       smoothScroll(targetId, duration);
     },
@@ -74,7 +69,7 @@ export default {
   border-radius : 6px;
   background-color: rgb(32, 55, 95);
 }
-#language-dropdown{
+/* #language-dropdown{
   text-align: center;
   display: flex;
   justify-content: center;
@@ -85,7 +80,7 @@ export default {
   min-width : 120px;
   margin-right : 10px;
   background-color: rgb(94, 94, 110);
-}
+} */
 #profile_navbar{
   margin-top:6px;
 }
