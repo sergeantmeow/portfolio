@@ -1,45 +1,21 @@
 <template>
-  <div class="profile">
-    <nav id="profile_navbar">
-      <span class="provile_nav">
-        <a href="#aboutMe" class="text-decoration-none m-2" @click.prevent="scrollTo('aboutMe', 100)">About Me</a>
-      </span>
-      <span class="profile_nav">
-        <a href="#skillView" class="text-decoration-none m-2" @click.prevent="scrollTo('skillView', 200)">Skills</a>
-      </span>
-      <span class="profile_nav">
-        <a href="#experienceView" class="text-decoration-none m-2" @click.prevent="scrollTo('experienceView', 300)">Experiences</a>
-      </span>
-      <span class="profile_nav">
-        <a href="#projectView" class="text-decoration-none m-2" @click.prevent="scrollTo('projectView', 400)">Projects</a>
-      </span>
-      <span class="profile_nav">
-        <!-- <span id="language-dropdown" class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Language
-          </a>
-          <ul id="language-menu" class="dropdown-menu">
-            <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setKorean"><img src="../assets/korflag.png" class="flagImg" alt="">한국어</a></li>
-            <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setEnglish"><img src="../assets/usflag.png" class="flagImg" alt="">English</a></li>
-          </ul>
-        </span> -->
-      </span>
-    </nav>
-    <div>
-      <AboutMe :language-set='languageSetting' id="aboutMe" class="view_element" />
-      <SkillView :language-set='languageSetting' id="skillView" class="view_element" />
-      <ExperienceView :language-set='languageSetting' id="experienceView" class="view_element" />
-      <ProjectView :language-set='languageSetting' id="projectView" class="view_element" />
-    </div>
+    <div class="footerRow">
+        <div class="footer">
+            <a href="mailto:andrew.daehyun@gmail.com" class="webLink text-decoration-none text-light">
+                <img src="@/assets/email.png" class="contactImg" alt=""> andrew.daehyun@gmail.com
+            </a>
+          </div>
+        <div class="footer">
+            <a href="tel:+821049096281" class="webLink text-decoration-none text-light">
+                <img src="@/assets/phone.png" class="contactImg" alt=""> +82 1049096281
+            </a>
+          </div>
+          <button :on-click="sendMail">haha</button>
   </div>
 </template>
 
 <script>
-import AboutMe from '@/components/AboutMe.vue'
-import SkillView from '@/components/SkillView.vue'
-import ExperienceView from '@/components/ExperienceView.vue'
-import ProjectView from '@/components/ProjectView.vue'
-import { smoothScroll } from '@/smooth-scroll.js';
+// import nodeMailer from "/Users/daehyunan/Desktop/Portfolio/Portfolio/node_modules"
 
 export default {
   name : 'ProfileView',
@@ -50,15 +26,14 @@ export default {
     },
   },
   components: {
-    AboutMe,
-    SkillView,
-    ExperienceView,
-    ProjectView,
+  
   },
   methods: {
-    scrollTo(targetId, duration) {
-      smoothScroll(targetId, duration);
-    },
+    sendMail : {
+      // sendEmail({
+
+      // })
+    }
   }
 }
 </script>

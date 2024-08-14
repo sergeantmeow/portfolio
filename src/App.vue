@@ -42,21 +42,9 @@
     <div id="footer-navbar" class="p-2">
       <div class="footerRow">
         <span class="footer">
-          <a href="mailto:andrew.daehyun@gmail.com" class="webLink text-decoration-none text-light">
-            <img src="@/assets/email.png" class="contactImg" alt=""> andrew.daehyun@gmail.com
-          </a>
-        </span>
-        <span class="footer">
-          <a href="tel:+821049096281" class="webLink text-decoration-none text-light">
-            <img src="@/assets/phone.png" class="contactImg" alt=""> +82 1049096281
-          </a>
-        </span>
-      </div>
-      <div class="footerRow">
-        <span class="footer">
           <a href="https://aturservice.tistory.com/category/Programming%20Language" target="_blank" class="webLink text-decoration-none text-light">
-          <img src="@/assets/tistory.png" class="logoImg" alt="">
-          Blog
+            <img src="@/assets/tistory.png" class="logoImg" alt="">
+            Blog
           </a>
           <a href="https://github.com/sergeantmeow" target="_blank" class="webLink text-decoration-none text-light">
             <img src="@/assets/github.png" class="logoImg" alt="">
@@ -67,6 +55,12 @@
             LinkedIn
           </a>
         </span>
+      </div>
+      <div class="footerRow">
+        <div class="footer">
+          Copyright © Daehyun An All Rights Reserved.<br>
+          Designed by Daehyun An.
+        </div>
       </div>
     </div>
   </div>
@@ -184,7 +178,7 @@ nav a:hover {
     width : calc(4px + 3.5vw);
   }
   .footer{
-    font-size: 3.5vw;
+    font-size: 2vw;
   }
 }
 </style>
