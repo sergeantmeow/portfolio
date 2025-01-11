@@ -4,17 +4,17 @@
       <span class="provile_nav">
         <a href="#aboutMe" class="text-decoration-none m-2" @click.prevent="scrollTo('aboutMe', 100)">About Me</a>
       </span>
-      <span class="profile_nav">
+      <span class="provile_nav">
+        <a href="#contactMe" class="text-decoration-none m-2" @click.prevent="scrollTo('contactMe', 200)">Contact</a>
+      </span>
+      <!-- <span class="profile_nav">
         <a href="#skillView" class="text-decoration-none m-2" @click.prevent="scrollTo('skillView', 200)">Skills</a>
       </span>
       <span class="profile_nav">
         <a href="#experienceView" class="text-decoration-none m-2" @click.prevent="scrollTo('experienceView', 300)">Experiences</a>
-      </span>
-      <span class="profile_nav">
-        <a href="#projectView" class="text-decoration-none m-2" @click.prevent="scrollTo('projectView', 400)">Projects</a>
-      </span>
-      <span class="profile_nav">
-        <!-- <span id="language-dropdown" class="nav-item dropdown">
+      </span> -->
+      <!-- <span class="profile_nav">
+        <span id="language-dropdown" class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Language
           </a>
@@ -22,11 +22,12 @@
             <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setKorean"><img src="../assets/korflag.png" class="flagImg" alt="">한국어</a></li>
             <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setEnglish"><img src="../assets/usflag.png" class="flagImg" alt="">English</a></li>
           </ul>
-        </span> -->
-      </span>
+        </span>
+      </span> -->
     </nav>
     <div>
       <AboutMe :language-set='languageSetting' id="aboutMe" class="view_element" />
+      <ContactMe :languageSet='languageSetting' id="contactMe" class="view_element" />
       <SkillView :language-set='languageSetting' id="skillView" class="view_element" />
       <ExperienceView :language-set='languageSetting' id="experienceView" class="view_element" />
       <ProjectView :language-set='languageSetting' id="projectView" class="view_element" />
@@ -36,6 +37,7 @@
 
 <script>
 import AboutMe from '@/components/AboutMe.vue'
+import ContactMe from '@/components/ContactMe.vue'
 import SkillView from '@/components/SkillView.vue'
 import ExperienceView from '@/components/ExperienceView.vue'
 import ProjectView from '@/components/ProjectView.vue'
@@ -51,6 +53,7 @@ export default {
   },
   components: {
     AboutMe,
+    ContactMe,
     SkillView,
     ExperienceView,
     ProjectView,

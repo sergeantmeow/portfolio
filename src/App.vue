@@ -21,9 +21,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="#"><router-link to="/experience" class="text-decoration-none">Experience</router-link></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><router-link to="/contact" class="text-decoration-none">Contact</router-link></a>
-              </li>
               <li id="language-dropdown" class="nav-item dropdown">
                 <a id="language-dropdown-button" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {{ language }}
