@@ -6,7 +6,7 @@
         I'm <span class="text-primary">Daehyun</span>, an<br>
         IT Administrator</p>
       </div>
-      <div id="level" >with 5 years of experience</div>
+      <div id="level" >with 7 years of experience</div>
       <div id="level" >in hospitality industry</div>
     </div>
   </div>
