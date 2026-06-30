@@ -1,35 +1,25 @@
 <template>
-  <div class="profile">
-    <nav id="profile_navbar">
-      <span class="provile_nav">
-        <a href="#aboutMe" class="text-decoration-none m-2" @click.prevent="scrollTo('aboutMe', 100)">About Me</a>
-      </span>
-      <span class="profile_nav">
-        <a href="#skillView" class="text-decoration-none m-2" @click.prevent="scrollTo('skillView', 200)">Skills</a>
-      </span>
-      <span class="profile_nav">
-        <a href="#experienceView" class="text-decoration-none m-2" @click.prevent="scrollTo('experienceView', 300)">Experiences</a>
-      </span>
-      <span class="profile_nav">
-        <a href="#projectView" class="text-decoration-none m-2" @click.prevent="scrollTo('projectView', 400)">Projects</a>
-      </span>
-      <span class="profile_nav">
-        <!-- <span id="language-dropdown" class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Language
-          </a>
-          <ul id="language-menu" class="dropdown-menu">
-            <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setKorean"><img src="../assets/korflag.png" class="flagImg" alt="">한국어</a></li>
-            <li><a class="dropdown-item fw-bold" href="#" @click.prevent = "setEnglish"><img src="../assets/usflag.png" class="flagImg" alt="">English</a></li>
-          </ul>
-        </span> -->
-      </span>
+  <div class="profile app-container">
+    <nav id="profile_navbar" class="section-nav">
+      <a href="#aboutMe" class="section-chip" @click.prevent="scrollTo('aboutMe', 100)">
+        {{ languageSetting === 'korean' ? '소개' : 'About Me' }}
+      </a>
+      <a href="#skillView" class="section-chip" @click.prevent="scrollTo('skillView', 200)">
+        {{ languageSetting === 'korean' ? '기술' : 'Skills' }}
+      </a>
+      <a href="#experienceView" class="section-chip" @click.prevent="scrollTo('experienceView', 300)">
+        {{ languageSetting === 'korean' ? '경력' : 'Experiences' }}
+      </a>
+      <a href="#projectView" class="section-chip" @click.prevent="scrollTo('projectView', 400)">
+        {{ languageSetting === 'korean' ? '프로젝트' : 'Projects' }}
+      </a>
     </nav>
-    <div>
-      <AboutMe :language-set='languageSetting' id="aboutMe" class="view_element" />
-      <SkillView :language-set='languageSetting' id="skillView" class="view_element" />
-      <ExperienceView :language-set='languageSetting' id="experienceView" class="view_element" />
-      <ProjectView :language-set='languageSetting' id="projectView" class="view_element" />
+
+    <div class="section-stack">
+      <AboutMe :language-set="languageSetting" id="aboutMe" class="view_element" />
+      <SkillView :language-set="languageSetting" id="skillView" class="view_element" />
+      <ExperienceView :language-set="languageSetting" id="experienceView" class="view_element" />
+      <ProjectView :language-set="languageSetting" id="projectView" class="view_element" />
     </div>
   </div>
 </template>
@@ -39,14 +29,14 @@ import AboutMe from '@/components/AboutMe.vue'
 import SkillView from '@/components/SkillView.vue'
 import ExperienceView from '@/components/ExperienceView.vue'
 import ProjectView from '@/components/ProjectView.vue'
-import { smoothScroll } from '@/smooth-scroll.js';
+import { smoothScroll } from '@/smooth-scroll.js'
 
 export default {
-  name : 'ProfileView',
-  props : {
+  name: 'ExperiencesView',
+  props: {
     languageSetting: {
       type: String,
-      default : 'english'
+      default: 'english'
     },
   },
   components: {
@@ -57,34 +47,60 @@ export default {
   },
   methods: {
     scrollTo(targetId, duration) {
-      smoothScroll(targetId, duration);
+      smoothScroll(targetId, duration)
     },
   }
 }
 </script>
 
 <style scoped>
-.view_element{
-  margin : 14px;
-  border-radius : 6px;
-  background-color: rgb(32, 55, 95);
+.profile {
+  padding-block: clamp(20px, 4vw, 36px);
 }
-/* #language-dropdown{
-  text-align: center;
+.section-nav {
+  position: sticky;
+  top: calc(var(--nav-h) + 10px);
+  z-index: 10;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  margin-top: 6px;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 8px;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
 }
-#language-menu {
-  min-width : 120px;
-  margin-right : 10px;
-  background-color: rgb(94, 94, 110);
-} */
-#profile_navbar{
-  margin-top:6px;
+.section-chip {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 7px 16px;
+  border-radius: 999px;
+  transition: color 0.18s ease, background 0.18s ease;
 }
-.flagImg{
-  margin-right: 4px;
+.section-chip:hover {
+  color: #fff;
+  background: rgba(99, 102, 241, 0.18);
+}
+.section-stack {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(18px, 3vw, 28px);
+}
+.view_element {
+  scroll-margin-top: calc(var(--nav-h) + 70px);
+}
+
+@media (max-width: 575.98px) {
+  .section-nav {
+    border-radius: var(--radius);
+  }
+  .section-chip {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+  }
 }
 </style>
