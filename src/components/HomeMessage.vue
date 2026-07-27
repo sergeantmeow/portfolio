@@ -10,7 +10,7 @@
     <p id="level" class="muted">{{ copy.level2 }}</p>
     <div class="hero-actions">
       <router-link to="/profile" class="btn-primary-grad">{{ copy.cta }}</router-link>
-      <router-link to="/skill" class="btn-ghost">{{ copy.cta2 }}</router-link>
+      <router-link to="/project" class="btn-ghost">{{ copy.cta2 }}</router-link>
     </div>
   </div>
 </template>
@@ -28,25 +28,25 @@ export default {
     copy() {
       if (this.languageSetting === 'korean') {
         return {
-          badge: 'IT 관리자 · 인프라',
+          badge: 'IT 개발 · 운영 엔지니어',
           hi: '안녕하세요,',
           imA: '저는',
-          role: 'IT 관리자입니다',
+          role: '웹 개발자입니다',
           level1: '호스피탈리티 업계에서의',
-          level2: '7년 경력을 바탕으로 일합니다',
+          level2: '8년 경력을 바탕으로 일합니다',
           cta: '프로필 보기',
-          cta2: '기술 스택'
+          cta2: '프로젝트 보기'
         }
       }
       return {
-        badge: 'IT Administrator · Infra',
+        badge: 'IT Development · Operations Engineer',
         hi: 'Hi,',
         imA: "I'm",
-        role: 'an IT Administrator',
-        level1: 'with 7 years of experience',
+        role: 'a web developer',
+        level1: 'with 8 years of experience',
         level2: 'in the hospitality industry',
         cta: 'View Profile',
-        cta2: 'My Skills'
+        cta2: 'View Projects'
       }
     }
   }

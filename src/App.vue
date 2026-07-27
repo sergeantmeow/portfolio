@@ -20,10 +20,7 @@
               <router-link to="/profile" class="nav-link">Profile</router-link>
             </li>
             <li class="nav-item">
-              <router-link to="/skill" class="nav-link">Skill</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link to="/experience" class="nav-link">Experience</router-link>
+              <router-link to="/project" class="nav-link">Project</router-link>
             </li>
             <li id="language-dropdown" class="nav-item dropdown">
               <a id="language-dropdown-button" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

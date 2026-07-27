@@ -27,6 +27,20 @@ export default {
       const ko = this.languageSet === 'korean'
       return [
         {
+          title: ko ? '인스파이어 리조트' : 'Inspire Entertainment Resorts',
+          position: ko ? '개발 & 운영 엔지니어' : 'Development & Operations Engineer',
+          desc: ko
+            ? ['사내 업무 애플리케이션 신규 개발 및 기능 고도화', '애플리케이션 배포 프로세스 구축 및 운영', '애플리케이션 인프라 아키텍처 설계']
+            : ['Developing and enhancing in-house business applications', 'Building and operating application deployment pipelines', 'Designing application infrastructure architecture'],
+        },
+        {
+          title: ko ? '인스파이어 리조트' : 'Inspire Entertainment Resorts',
+          position: ko ? 'IT 프로덕트 매니저' : 'IT Product Analyst',
+          desc: ko
+            ? ['발주요청 검토 및 발주', '견적 취합 및 낙찰', '정기 및 수시 보고 데이터 취합']
+            : ['Reviewing purchase requisitions and making orders', 'Collecting quotations and bidding', 'Integrating and processing data for reports'],
+        },
+        {
           title: ko ? '메리어트 대구' : 'Marriott Daegu',
           position: ko ? '구매부 주임' : 'Purchasing Supervisor',
           desc: ko
@@ -47,13 +61,13 @@ export default {
             ? ['고객응대', '체크인, 체크아웃 진행', '일간 거래 정산 및 보고']
             : ['Guest service', 'Processing check-in and check-out', 'Night audit'],
         },
-        {
-          title: ko ? '하이레벨 영어학원' : 'High Level English Institute',
-          position: ko ? '코치 강사' : 'Coach Teacher',
-          desc: ko
-            ? ['문제풀이 해설', '숙제 검사 및 채점', '기출문제 분석']
-            : ['Solving questions', 'Homework checks and grading', 'Test question analysis'],
-        },
+        // {
+        //   title: ko ? '하이레벨 영어학원' : 'High Level English Institute',
+        //   position: ko ? '코치 강사' : 'Coach Teacher',
+        //   desc: ko
+        //     ? ['문제풀이 해설', '숙제 검사 및 채점', '기출문제 분석']
+        //     : ['Solving questions', 'Homework checks and grading', 'Test question analysis'],
+        // },
       ]
     },
   },

@@ -10,10 +10,7 @@
       <a href="#experienceView" class="section-chip" @click.prevent="scrollTo('experienceView', 300)">
         {{ languageSetting === 'korean' ? '경력' : 'Experiences' }}
       </a>
-      <a href="#projectView" class="section-chip" @click.prevent="scrollTo('projectView', 400)">
-        {{ languageSetting === 'korean' ? '프로젝트' : 'Projects' }}
-      </a>
-      <a href="#contactMe" class="section-chip" @click.prevent="scrollTo('contactMe', 500)">
+      <a href="#contactMe" class="section-chip" @click.prevent="scrollTo('contactMe', 400)">
         {{ languageSetting === 'korean' ? '연락처' : 'Contact' }}
       </a>
     </nav>
@@ -22,7 +19,6 @@
       <AboutMe :language-set="languageSetting" id="aboutMe" class="view_element" />
       <SkillView :language-set="languageSetting" id="skillView" class="view_element" />
       <ExperienceView :language-set="languageSetting" id="experienceView" class="view_element" />
-      <ProjectView :language-set="languageSetting" id="projectView" class="view_element" />
       <ContactMe :language-set="languageSetting" id="contactMe" class="view_element" />
     </div>
   </div>
@@ -33,7 +29,6 @@ import AboutMe from '@/components/AboutMe.vue'
 import ContactMe from '@/components/ContactMe.vue'
 import SkillView from '@/components/SkillView.vue'
 import ExperienceView from '@/components/ExperienceView.vue'
-import ProjectView from '@/components/ProjectView.vue'
 import { smoothScroll } from '@/smooth-scroll.js'
 
 export default {
@@ -49,7 +44,6 @@ export default {
     ContactMe,
     SkillView,
     ExperienceView,
-    ProjectView,
   },
   methods: {
     scrollTo(targetId, duration) {
