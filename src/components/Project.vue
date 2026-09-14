@@ -6,6 +6,7 @@
     </div>
     <div class="project-body">
       <h4 class="project-title">{{ project.title }}</h4>
+      <span v-if="roleLabel" class="project-role">{{ roleLabel }}</span>
       <p class="project-desc">{{ description }}</p>
       <ul class="project-tags">
         <li v-for="tag in project.tags" :key="tag">{{ tag }}</li>
@@ -56,6 +57,12 @@ export default {
     },
     thumbStyle() {
       return { background: this.project.gradient || 'var(--accent-grad)' }
+    },
+    roleLabel() {
+      if (this.languageSet === 'korean') {
+        return this.project.roleKor || this.project.role
+      }
+      return this.project.role || this.project.roleKor
     },
   },
 }
@@ -121,6 +128,18 @@ export default {
   font-weight: 600;
   margin: 0 0 8px;
   color: var(--text);
+}
+.project-role {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 999px;
+  padding: 3px 10px;
+  margin: 0 0 12px;
 }
 .project-desc {
   color: var(--text-muted);
